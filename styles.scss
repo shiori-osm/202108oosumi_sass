@@ -1,18 +1,334 @@
 body{
   max-width: 1200px;
 }
-
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+$main-color:#E37AB0;
+$sub-color:#6F99E3;
+$bg-color:#FFF7FB;
 
 
 .header{
   display: flex;
-  justify-content: space-between;
+  width: 90%;
+  margin: auto;
   height: 70px;
+  align-items: center;
+  justify-content: space-between;
 
   &-logo{
-    width: 50px;
+    width: 10%;
   }
   &-nav-list{
+    display: flex;
+    align-items: center;
+  }
+
+
+  &-link-btn{
+    display: block;
+    background-color: $main-color;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  &-nav-list-item{
+    margin-right: 3%;
+  }
+}
+.main-firstview{
+  &-bg-img{
+    position: relative;
+    width: 100%;
+  }
+  &-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  &-main-img{
+    width: 45%;
+  }
+  &-desc{
+    width: 45%;
+    &-main{
+      font-size: 2em;
+    }
+    &-link{
+      @include btn1;
+    }
+  }
+  &-desc-main{
+    font-size: 2rem;
+  }
+
+}
+
+.about{
+  background-color:$bg-color ;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  &-img{
+    width: 45%;
+  }
+  &-desc{
+    width: 45%;
+    line-height: 100%;
+  }
+}
+
+.trouble{
+  width: 80%;
+  margin: auto;
+  &-catch{
+    text-align: center;
+  }
+  &-flex{
+    display: flex;
+    justify-content: center;
+  }
+  &-container:not(:last-child){
+    margin-right: 5%;
+  }
+  &-container-desc{
+    text-align: center;
+    font-weight: bold;
+  }
+
+}
+
+.solution{
+  width: 100%;
+  background-color: $bg-color;
+  &-catch{
+    text-align: center;
+  }
+  &-container{
+    margin-bottom: 5%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+  }
+  &-container-desc{
+    width: 40%;
+  }
+  &-container-img{
+    width: 40%;
+  }
+}
+
+.feature{
+  width: 100%;
+  &-catch{
+    text-align: center;
+  }
+  &-icons{
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    &-container{
+      text-align: center;
+      border: 1px $main-color solid ;
+      box-shadow: 5px 5px $bg-color;
+      border-radius: 20px;
+    }
+    &-container:not(:last-child){
+      margin-right: 2%;
+    }
+  }//&-icons
+
+  &-main{
+    width: 100%;
+    padding: 5%;
+    background-color: $main-color;
+    &-catch{
+      color: #fff;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+  &-links{
+    display: flex;
+    justify-content: center;
+    
+    @mixin btn1{
+      color: #fff;
+      display: block;
+      width:30% ;
+      height: 50px;
+      line-height: 50px;
+      background-color: $sub-color;
+      text-align: center;
+      border-radius: 30px;
+      margin-right: 5%;
+    }
+    &-btn1{
+      @include btn1;
+    }
+    @mixin btn2{
+      color: $main-color;
+      display: block;
+      width:30% ;
+      height: 50px;
+      line-height: 50px;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 30px;
+    }
+    &-btn2{
+      @include btn2;
+    }
+  }
+}
+
+  .company{
+    width: 100%;
+    &-catch{
+      text-align: center;
+    }
+    &-flex{
+      width: 100%;
+      display: flex;
+    }
+    &-container{
+      border: 1px solid #eee ;
+      border-radius: 20px;
+      &-item{
+        padding: 5%;
+      }
+      &-img{
+        position: relative;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+      &-rect{
+        background-color: #fff;
+        padding: 0.5%;
+        border: 1px solid $main-color;
+        position: absolute;
+
+      }
+      &-desc{
+        font-weight: bold;
+      }
+    }
+    &-container:not(:last-child){
+      margin-right: 2%;
+    }
+}
+
+.plans{
+  width: 80%;
+  margin: auto;
+  &-catch{
+    text-align: center;
+  }
+  &-flex{
+    display: flex
+  }
+  &-card{
+    width: 100%;
+    border: 2px solid #eee ;
+    border-radius: 20px;
+    &-title{
+      text-align: center;
+      color: #fff;
+      background-color: $main-color;
+    }
+  }
+  &-card-standard{
+    border: 2px solid #eee ;
+    border-radius: 20px;
+    width: 120%;
+    height: 150%;
+  }
+  &-card-list{
+    padding: 5%;
+    text-align: center;
+  }
+
+  &-btn{
+    margin: auto;
+    font-weight: bold;
+    display: block;
+    background-color: #e8e8e8;
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+}//.plans
+
+.questions{
+  width: 80%;
+  margin: auto;
+
+  &-catch{
+    text-align: center;
+  }
+  &-box{
+    color: $main-color;
+    font-weight: bold;
+    width: 100%;
+    padding: 2%;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+  }
+  &-title{
+    color: $main-color;
+  }
+  &-answer{
+    width: 90%;
+    margin: auto;
+  }
+  &-answer-container{
+    display: flex;
+    &-a{
+      color: $sub-color;
+      margin: 2%;
+    }
+  }
+}
+
+.trial{
+  width: 100%;
+  padding: 10%;
+  background-color: $main-color;
+  &-catch{
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+  }
+  &-links{
+    display: flex;
+    justify-content: center;
+
+    &-btn1{
+      @include btn1;
+    }
+ 
+    &-btn2{
+      @include btn2;
+    }
+  }
+
+}
+
+.footer{
+  &-flex{
     display: flex;
   }
 }
