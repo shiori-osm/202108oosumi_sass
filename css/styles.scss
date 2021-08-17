@@ -1,0 +1,730 @@
+// まとめ設定↓
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+$main-color:#E37AB0;
+$sub-color:#6F99E3;
+$bg-color:#FFF7FB;
+
+@mixin blue-btn{
+  color: #fff;
+  display: block;
+  width:30% ;
+  height: 50px;
+  line-height: 50px;
+  background-color: $sub-color;
+  text-align: center;
+  border-radius: 30px;
+  margin-right: 5%;
+}
+@mixin white-btn{
+  color: $main-color;
+  display: block;
+  width:30% ;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 30px;
+}
+
+// header↓
+.header{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+
+  &-logo{
+    width: 10%;
+  }
+  &-nav-list{
+    display: flex;
+    align-items: center;
+  }
+  &-nav-list-item:nth-child(5){
+    margin-right: 50px;
+  }
+  &-link-pinkbtn{
+    display: block;
+    color: #fff;
+    background-color: $main-color;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  &-link-bluebtn{
+    display: block;
+    color: #fff;
+    background-color: $sub-color;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  &-nav-list-item{
+    margin-right: 10px;
+  }
+}
+// データから個人に合わせた学習を↓
+.firstview{
+  &-bg-img{
+    width: 100%;
+  }
+  &-container{
+    padding:2%;
+    background-image: url(..img/fv__bg-pc.svg);
+    background-size: auto;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    &-desc{
+      margin: 2%;
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-main{
+        font-size: 2em;
+        margin-bottom: 5%;
+      }
+      &-sub{
+        margin-bottom: 5%;
+      }
+      &-link{
+        display: block;
+        background-color: $main-color;
+        color: #fff;
+        width: 70%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50px;
+      }
+      &-sp-img{
+        display: none;
+      }
+  }
+  &-main-img{
+    width: 30%;
+  }
+  }
+  &-desc-main{
+    font-size: 2rem;
+  }
+
+}
+
+// 膨大な学習データの分析～↓
+.about{
+  background-color:$bg-color ;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  &-img{
+    margin: 5% 0;
+    width: 45%;
+  }
+  &-desc{
+    font-size: 1.5em;
+    margin-right: 5%;
+    width: 45%;
+    line-height: 100%;
+  }
+}
+// こんなお悩み↓
+.trouble{
+  padding: 5% 0;
+  width: 80%;
+  margin: auto;
+  &-catch{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+  }
+  &-flex{
+    display: flex;
+    justify-content: center;
+    &-container:not(:last-child){
+      margin-right: 5%;
+    }
+    &-container{
+      &-sp{
+        display: none;
+      }
+      &-pc{
+        display: block;
+        margin-right: 5%;
+      }
+      &-desc{
+        margin-top: 10%;
+        font-size: 1.1em;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}
+// Learnで全て解決↓
+.solution{
+  align-items: baseline;
+  padding: 5%;
+  background-color: $bg-color;
+  &-catch{//.solution-datch
+    font-size: 1.5em;
+    text-align: center;
+    padding: 3%;
+  }
+  &-container{//.solution-container
+    padding-bottom: 5%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    &-img,&-img-pc{ //.solution-container-img
+      width: 40%;
+    }
+    &-img-sp{
+      display: none;
+    }
+    &-desc{//.solution-container-desc
+      width: 55%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &-flex{ //.solution-container-desc-flex
+        display: flex;
+        margin-bottom: 5%;
+        &-n{
+          font-size: 2em;
+          color: $main-color;
+          height: 50px;
+          line-height: 50px;
+          margin-right: 2%;
+        }
+        &-title{
+          font-size: 1.3em;
+        }
+      }
+  }
+
+  }
+}
+
+// 機能一覧、アイコン５つ並び↓
+.feature{
+  padding: 5% 0;
+  &-catch{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+  }
+  &-icons{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 5%;
+    &-container{
+      text-align: center;
+      padding: 3%;
+      border: 1px $main-color solid ;
+      box-shadow: 0 0 5px $main-color;
+      border-radius: 20px;
+      &-item{
+        &-img{
+          width: 100%;
+          margin-bottom: 20%;
+        }
+        &-desc{
+          width: 100%;
+        }
+      }
+    }
+    &-container:not(:last-child){
+      margin-right: 2%;
+    }
+  }
+}
+
+//ピンク背景＋h1＋リンク
+ // 成長が楽しくなる。↓
+ .links{
+  padding: 5%;
+  background-color: $main-color;
+  &-catch{
+    color: #fff; 
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: normal;
+  }
+  &-btns{
+    display: flex;
+    justify-content: center;
+    
+    &-blue{
+      @include blue-btn;
+    }
+    &-white{
+      @include white-btn;
+    }
+  }
+}
+
+// 導入企業↓
+.company{
+  &-catch{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+  }
+  padding: 5% 0;
+  width: 100%;
+  &-flex{
+    width: 100%;
+    display: flex;
+    &-container{
+      border: 1px solid #eee ;
+      border-radius: 20px;
+      box-shadow: 0 0 5px #eee;
+      &-item{
+        padding: 5%;
+        &-p{
+          font-size: 0.8em;
+          margin: 10% 0;
+        }
+        &-desc{
+          font-weight: bold;
+          margin-bottom: 10%;
+        }
+      }
+      &-img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+      &-rect{
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background-color: #fff;
+        padding: 0.5%;
+        border: 1px solid $main-color;
+      }
+      &-sp{
+        display: none;
+      }
+    }
+    &-container:not(:last-child){
+      margin-right: 2%;
+    }
+  }
+}
+
+// 費用↓
+.plans{
+  margin: auto;
+  &-table{
+    border: 2px solid #e8e8e8;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    &-title{
+      &-free,&-middle,&-premium{
+        font-size: 1.5em;
+        border-radius: 20px 20px 0 0;
+      }
+      &-free,&-premium{
+        color: #fff;
+        background-color: $sub-color;
+        padding: 5%;
+        &-s,&-p{
+          display: block;
+          font-size: 0.5em;
+          margin-bottom: 3%;
+        }
+      }
+      &-middle{
+        color: #fff;
+        background-color:$main-color ;
+      }
+      &-middle::after, &-premium::after{
+        content: "/月";
+        font-size: .8em;
+      }
+    }
+    &-desc{
+      padding: 5%;
+      &-list{
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        margin-bottom: 8%;
+      }
+    }
+  }
+  &-catch{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+  }
+  &-table-btn{
+    display: block;
+    background-color: #e8e8e8;
+    width: 80%;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 5%;
+  }
+ 
+}
+
+// よくある質問↓
+.questions{
+  padding: 5% 0;
+  width: 80%;
+  margin: auto;
+
+  &-catch{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 3%;
+  }
+  &-box{
+    color: $main-color;
+    font-weight: bold;
+    width: 100%;
+    padding: 2%;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
+  &-title{
+    color: $main-color;
+  }
+  &-answer{
+    width: 90%;
+    margin: auto;
+  }
+  &-answer-container{
+    display: flex;
+    margin-bottom: 5%;
+    &-a{
+      color: $sub-color;
+      margin: 2%;
+    }
+  }
+}
+
+
+// Footer↓
+.footer{
+  background-color: $bg-color;
+  padding: 5% 0 0 0;
+  &-logo{
+    margin-right: 10%;
+  }
+  &-flex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    &-list{
+      margin-right: 10%;
+    }
+  }
+  &-copyright{
+    background-color: $bg-color;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+}
+
+// レスポンシブ用header-logo PC非表示
+.header-sp{
+  display: none;
+}
+
+// レスポンシブ
+@media screen and (max-width: 812px) {
+
+  // PC用header-logo
+  .header{
+    display: none;
+  }
+  .header-sp{
+    display: block;
+    padding: 5%;
+  }
+  
+  .firstview{
+    background-image: url(..img/fv__sp-pc);
+    background-size: cover;
+    &-container{
+      flex-direction: column;
+      &-desc{
+        width: 95%;
+
+        margin: auto;
+        &-main{
+          font-size: 2.5em;
+        }
+        &-sub{
+          width: 100%;
+          font-size: 1.2em;
+        }
+        &-sp-img{
+          display: block;
+          width: 100%;
+          margin: auto;
+          padding-bottom: 5%;
+        }
+        &-link{
+          width: 100%;
+          margin: auto;
+          height: 4em;
+          line-height: 4em;
+          margin-bottom: 5%;
+        }
+      }
+    }
+    &-main-img{
+      display: none;
+    }
+  }
+  //  レスポンシブ 膨大な学習データから～
+  .about{
+    flex-direction: column-reverse;
+    padding: 20% 0;
+    &-img{
+      width: 90%;
+    }
+    &-desc{
+      width: 80%;
+      margin: auto;
+    }
+  }
+  
+  //レスポンシブ こんなお悩み～
+  .trouble{
+    &-catch{
+      text-align: center;
+      margin: 15% 3%;
+    }
+    &-flex{
+      display: block;
+      &-container{
+        display: flex;
+        &-img{
+          width:45%;
+        }
+        &-pc{
+          display: none;
+        }
+        &-desc{
+          margin-top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width:100%;
+          font-size:1.2em;
+          text-align: start;
+          margin-left: 5%;
+        }
+        &-sp{
+          display: block;
+          display: flex;
+        }
+      }
+    }
+  }
+  // レスポンシブ Learnで全て解決
+  .solution{
+    padding: 10%;
+    &-catch{
+      margin: 15% auto;
+      font-size: 2em;
+    }
+    &-container{
+      display: block;
+      &-desc{
+        width: 100%;
+        font-size: 1.2em;
+        margin-bottom: 10%;
+        &-flex{
+          display: block;
+        }
+      }
+      &-img{
+        width: 100%;
+      }
+      &-img-sp{
+        display: block;
+        width: 100%;
+      }
+      &-img-pc{
+        display: none;
+      }
+    }
+  }
+  
+  // レスポンシブ 機能一覧
+  .feature{
+    &-catch{
+      margin: 20%;
+    }
+    &-main{
+      flex-direction: column;
+    }
+    &-icons{
+      flex-wrap: wrap;
+      justify-content: center;
+      &-container{
+        width: 35%;
+        justify-content: center;
+        margin-bottom: 5%;
+        &-item{
+          &-img{
+            margin-bottom: 5%;
+          }
+          &-desc{
+            font-size: 1.2em;
+            font-weight: bold;
+          }
+        }
+      }//&-container
+    }//&-icons
+  }
+ //.レスポンシブlinks↓
+  .links{
+    &-catch{
+      margin: 5% 0;
+    }
+    &-btns{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-blue{
+        margin-right:0 ;
+        width: 100%;
+        margin-bottom: 5%;
+      }
+      &-white{
+        width: 100%;
+      }
+    }
+  }
+ // レスポンシブ導入企業↓
+  .company{
+    padding: 5% 0;
+    width: 100%;
+    &-catch{
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20%;
+    }
+    &-flex{
+      margin-left: 3%;
+      overflow-x:auto ;
+      white-space: nowrap;
+      width: 100%;
+      &-container{
+        position: relative;
+        border: 1px solid #eee ;
+        border-radius: 20px;
+        &-item{
+          &-p{
+            font-size: 1.2em;
+          }
+          &-desc{
+            width: 100%;
+            font-size: 1.5em;
+            padding: 0;
+          }
+        }
+        &-img{
+          position: relative;
+          width: 100%;
+          border-radius: 20px 20px 0 0;
+        }
+        &-rect{
+          position: absolute;
+          bottom: 50%;
+          width: 40px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          background-color: #fff;
+          padding: 0.5%;
+          border: 1px solid $main-color;
+        }
+      }
+    }
+  }
+  //レスポンシブ費用
+  .plans{
+    &-catch{
+      margin: 10%;
+    }
+
+  }
+  
+  .questions{
+    &-catch{
+      margin: 15%;
+    }
+    &-box{
+      padding: 5%;
+    }
+  }
+  .trial{
+    &-catch{
+      margin-bottom: 5%;
+    }
+    &-links{
+      flex-direction: column;
+      align-items: center;
+      &-bluebtn{
+        margin-right: 0;
+        width: 80%;
+        margin-bottom: 5%;
+      }
+      &-whitebtn{
+        width: 80%;
+      }
+    }
+  }
+  // レスポンシブfooter↓
+  .footer{
+    &-logo{
+      margin-bottom: 3%;
+      margin-left:-10% ;
+    }
+    &-flex{
+      flex-direction: column;
+      margin-left: 20%;
+      &-list,&-list2{
+        line-height: 2.5em;
+      }
+    }
+  }
+}
+
+
+
+
+
