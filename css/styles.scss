@@ -336,16 +336,33 @@ $bg-color:#FFF7FB;
 
 // 費用↓
 .plans{
-  margin: auto;
-  &-table{
-    border: 2px solid #e8e8e8;
-    border-radius: 20px;
-    width: 90%;
-    margin: auto;
+  &-flex{
+    justify-content: center;
+    display: flex;
+    &-container{
+      margin-top: 5%;
+      width: 20%;
+      &-middle{
+        width: 30%;
+      }
+    }
+    &-btn{
+      display: block;
+      background-color: #e8e8e8;
+      width: 80%;
+      margin: auto;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 30px;
+      margin-bottom: 5%;
+    }
     &-title{
-      &-free,&-middle,&-premium{
-        font-size: 1.5em;
+      &-free, &-middle, &-premium{
+        font-size: 2em;
+        font-weight: bold;
         border-radius: 20px 20px 0 0;
+        text-align: center;
       }
       &-free,&-premium{
         color: #fff;
@@ -360,6 +377,7 @@ $bg-color:#FFF7FB;
       &-middle{
         color: #fff;
         background-color:$main-color ;
+        padding: 5%;
       }
       &-middle::after, &-premium::after{
         content: "/月";
@@ -367,7 +385,16 @@ $bg-color:#FFF7FB;
       }
     }
     &-desc{
-      padding: 5%;
+      border: 2px solid #eee;
+      border-radius: 0 0 20px 20px;
+      font-size: 1.2em;
+      &-middle{
+        padding: 5% 0;
+        border: 2px solid #eee;
+        font-size: 1.2em;
+        border-radius: 0 0 20px 20px;
+      }
+      padding: 10%;
       &-list{
         border-bottom: 1px solid #eee;
         text-align: center;
@@ -375,21 +402,11 @@ $bg-color:#FFF7FB;
       }
     }
   }
+
   &-catch{
     font-size: 1.5em;
     text-align: center;
     padding-bottom: 3%;
-  }
-  &-table-btn{
-    display: block;
-    background-color: #e8e8e8;
-    width: 80%;
-    margin: auto;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 30px;
-    margin-bottom: 5%;
   }
  
 }
@@ -680,6 +697,21 @@ $bg-color:#FFF7FB;
   }
   //レスポンシブ費用
   .plans{
+    &-flex{
+      flex-direction: column;
+      &-container{
+        margin: auto;
+        width: 95%;
+        margin-bottom: 5%;
+        &-middle{
+          margin: auto;
+          width: 95%;
+          margin-bottom: 5%;
+
+        }
+
+      }
+    }
     &-catch{
       margin: 10%;
     }

@@ -363,51 +363,22 @@ a {
   margin-right: 2%;
 }
 
-.plans {
-  margin: auto;
+.plans-flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.plans-table {
-  border: 2px solid #e8e8e8;
-  border-radius: 20px;
-  width: 90%;
-  margin: auto;
+.plans-flex-container {
+  margin-top: 5%;
+  width: 20%;
 }
-.plans-table-title-free, .plans-table-title-middle, .plans-table-title-premium {
-  font-size: 1.5em;
-  border-radius: 20px 20px 0 0;
+.plans-flex-container-middle {
+  width: 30%;
 }
-.plans-table-title-free, .plans-table-title-premium {
-  color: #fff;
-  background-color: #6F99E3;
-  padding: 5%;
-}
-.plans-table-title-free-s, .plans-table-title-free-p, .plans-table-title-premium-s, .plans-table-title-premium-p {
-  display: block;
-  font-size: 0.5em;
-  margin-bottom: 3%;
-}
-.plans-table-title-middle {
-  color: #fff;
-  background-color: #E37AB0;
-}
-.plans-table-title-middle::after, .plans-table-title-premium::after {
-  content: "/月";
-  font-size: 0.8em;
-}
-.plans-table-desc {
-  padding: 5%;
-}
-.plans-table-desc-list {
-  border-bottom: 1px solid #eee;
-  text-align: center;
-  margin-bottom: 8%;
-}
-.plans-catch {
-  font-size: 1.5em;
-  text-align: center;
-  padding-bottom: 3%;
-}
-.plans-table-btn {
+.plans-flex-btn {
   display: block;
   background-color: #e8e8e8;
   width: 80%;
@@ -417,6 +388,53 @@ a {
   text-align: center;
   border-radius: 30px;
   margin-bottom: 5%;
+}
+.plans-flex-title-free, .plans-flex-title-middle, .plans-flex-title-premium {
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+.plans-flex-title-free, .plans-flex-title-premium {
+  color: #fff;
+  background-color: #6F99E3;
+  padding: 5%;
+}
+.plans-flex-title-free-s, .plans-flex-title-free-p, .plans-flex-title-premium-s, .plans-flex-title-premium-p {
+  display: block;
+  font-size: 0.5em;
+  margin-bottom: 3%;
+}
+.plans-flex-title-middle {
+  color: #fff;
+  background-color: #E37AB0;
+  padding: 5%;
+}
+.plans-flex-title-middle::after, .plans-flex-title-premium::after {
+  content: "/月";
+  font-size: 0.8em;
+}
+.plans-flex-desc {
+  border: 2px solid #eee;
+  border-radius: 0 0 20px 20px;
+  font-size: 1.2em;
+  padding: 10%;
+}
+.plans-flex-desc-middle {
+  padding: 5% 0;
+  border: 2px solid #eee;
+  font-size: 1.2em;
+  border-radius: 0 0 20px 20px;
+}
+.plans-flex-desc-list {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  margin-bottom: 8%;
+}
+.plans-catch {
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 3%;
 }
 
 .questions {
@@ -718,6 +736,22 @@ a {
     border: 1px solid #E37AB0;
   }
 
+  .plans-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plans-flex-container {
+    margin: auto;
+    width: 95%;
+    margin-bottom: 5%;
+  }
+  .plans-flex-container-middle {
+    margin: auto;
+    width: 95%;
+    margin-bottom: 5%;
+  }
   .plans-catch {
     margin: 10%;
   }
